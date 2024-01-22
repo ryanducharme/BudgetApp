@@ -16,7 +16,7 @@ namespace BudgettingApp
         private void AddExpenseButton_Click(object sender, EventArgs e)
         {
             int amount;
-            if(AmountTextBox.Text != "" && NameBox.Text != "")
+            if (AmountTextBox.Text != "" && NameBox.Text != "")
             {
                 expenseManager.CurrentExpenseGroup.AddEntry(new Expense(1, null, float.Parse(AmountTextBox.Text), NameBox.Text, DescriptionBox.Text, DatePicker.Value));
 
@@ -27,7 +27,12 @@ namespace BudgettingApp
                 item.SubItems.Add(lastExpense.Description);
                 item.SubItems.Add(lastExpense.DateTime.ToString());
                 ExpenseView.Items.Add(item);
-            }           
+            }
+        }
+
+        private void newBudgetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

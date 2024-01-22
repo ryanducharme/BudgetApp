@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ryan\\source\\repos\\BudgettingApp\\BudgettingApp\\BudgettingApp.csproj",
+      "projectUniqueName": "C:\\Users\\Ryan\\source\\repos\\BudgetApp\\BudgettingApp\\BudgettingApp.csproj",
       "projectName": "BudgettingApp",
-      "projectPath": "C:\\Users\\Ryan\\source\\repos\\BudgettingApp\\BudgettingApp\\BudgettingApp.csproj",
+      "projectPath": "C:\\Users\\Ryan\\source\\repos\\BudgetApp\\BudgettingApp\\BudgettingApp.csproj",
       "packagesPath": "C:\\Users\\Ryan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ryan\\source\\repos\\BudgettingApp\\BudgettingApp\\obj\\",
+      "outputPath": "C:\\Users\\Ryan\\source\\repos\\BudgetApp\\BudgettingApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ryan\\AppData\\Roaming\\NuGet\\NuGet.Config",
