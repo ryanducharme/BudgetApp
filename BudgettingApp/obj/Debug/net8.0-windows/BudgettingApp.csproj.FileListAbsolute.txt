@@ -1,0 +1,16 @@
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\bin\Debug\net8.0-windows\BudgettingApp.exe
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\bin\Debug\net8.0-windows\BudgettingApp.deps.json
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\bin\Debug\net8.0-windows\BudgettingApp.runtimeconfig.json
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\bin\Debug\net8.0-windows\BudgettingApp.dll
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\bin\Debug\net8.0-windows\BudgettingApp.pdb
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\obj\Debug\net8.0-windows\BudgettingApp.Form1.resources
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\obj\Debug\net8.0-windows\BudgettingApp.csproj.GenerateResource.cache
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\obj\Debug\net8.0-windows\BudgettingApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\obj\Debug\net8.0-windows\BudgettingApp.AssemblyInfoInputs.cache
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\obj\Debug\net8.0-windows\BudgettingApp.AssemblyInfo.cs
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\obj\Debug\net8.0-windows\BudgettingApp.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\obj\Debug\net8.0-windows\BudgettingApp.dll
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\obj\Debug\net8.0-windows\refint\BudgettingApp.dll
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\obj\Debug\net8.0-windows\BudgettingApp.pdb
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\obj\Debug\net8.0-windows\BudgettingApp.genruntimeconfig.cache
+C:\Users\Ryan\source\repos\BudgettingApp\BudgettingApp\obj\Debug\net8.0-windows\ref\BudgettingApp.dll
