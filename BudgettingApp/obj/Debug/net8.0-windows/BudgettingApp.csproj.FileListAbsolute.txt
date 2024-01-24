@@ -31,3 +31,4 @@ C:\Users\Ryan\source\repos\BudgetApp\BudgettingApp\obj\Debug\net8.0-windows\refi
 C:\Users\Ryan\source\repos\BudgetApp\BudgettingApp\obj\Debug\net8.0-windows\BudgettingApp.pdb
 C:\Users\Ryan\source\repos\BudgetApp\BudgettingApp\obj\Debug\net8.0-windows\BudgettingApp.genruntimeconfig.cache
 C:\Users\Ryan\source\repos\BudgetApp\BudgettingApp\obj\Debug\net8.0-windows\ref\BudgettingApp.dll
+C:\Users\Ryan\source\repos\BudgetApp\BudgettingApp\bin\Debug\net8.0-windows\BudgettingApp.dll.config

@@ -33,11 +33,14 @@ namespace BudgettingApp
         private void newBudgetToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+
             openFileDialog.Title = "Select a File";
             string folderName = "Budgets";
 
             // Combine base directory with the folder name
             string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, folderName);
+            openFileDialog.InitialDirectory = folderPath;
+            Debug.WriteLine(folderPath);
 
             // Check if the folder exists, if not, create it
             if (!Directory.Exists(folderPath))
