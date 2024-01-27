@@ -12,17 +12,17 @@ namespace BudgettingApp
         public float Amount { get; set; }
         public string Name {  get; set; }
         public string Description { get; set; }
-        public DateTime DateTime { get; set; }
+        public DateTime Date { get; set; }
         Category Category { get; set; }
 
         public Expense() { }
 
-        public Expense(Category _category, float _amount, string name, string _description, DateTime _dateTime) { 
+        public Expense(Category _category, float _amount, string name, string _description, DateTime _date) { 
             Category = _category;
             Amount = _amount;
             Name = name;
             Description = _description;
-            DateTime = _dateTime;
+            Date = _date;
         }
     }
 }
