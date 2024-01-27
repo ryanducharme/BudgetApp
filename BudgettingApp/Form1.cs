@@ -54,11 +54,14 @@ namespace BudgettingApp
                 ListViewItem item = new ListViewItem(expense.Name);
                 item.SubItems.Add(expense.Amount.ToString());
                 item.SubItems.Add(expense.Date.ToShortDateString());
-                //item.SubItems.Add(expense.Category);
+                item.SubItems.Add("");
 
                 item.SubItems.Add(expense.Description);
                 BudgetView.Items.Add(item);
             }
+
+            toolStripStatusLabel1.Text = manager.CurrentBudget.SumOfExpenses.ToString();
+            label2.Text = $"Total Expenses: {manager.CurrentBudget.SumOfExpenses.ToString()}";
         }
     }
 }

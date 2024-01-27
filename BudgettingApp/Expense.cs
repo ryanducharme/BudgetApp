@@ -9,7 +9,7 @@ namespace BudgettingApp
 {
     internal class Expense
     {
-        public float Amount { get; set; }
+        public double Amount { get; set; }
         public string Name {  get; set; }
         public string Description { get; set; }
         public DateTime Date { get; set; }
@@ -17,7 +17,7 @@ namespace BudgettingApp
 
         public Expense() { }
 
-        public Expense(Category _category, float _amount, string name, string _description, DateTime _date) { 
+        public Expense(Category _category, double _amount, string name, string _description, DateTime _date) { 
             Category = _category;
             Amount = _amount;
             Name = name;

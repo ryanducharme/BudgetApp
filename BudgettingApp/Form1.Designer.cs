@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             DatePicker = new DateTimePicker();
-            label1 = new Label();
             AmountTextBox = new TextBox();
             AmountLabel = new Label();
-            DescriptionBox = new TextBox();
             DescriptionLabel = new Label();
             NameBox = new TextBox();
             NameLabel = new Label();
@@ -48,63 +46,52 @@
             newBudgetToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
-            panel1 = new Panel();
-            ExpenseLabel = new Label();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
             BudgetView = new ListView();
             NameHeader = new ColumnHeader();
             AmountHeader = new ColumnHeader();
             DateHeader = new ColumnHeader();
             CategoryHeader = new ColumnHeader();
             DescriptionHeader = new ColumnHeader();
+            label2 = new Label();
+            panel2 = new Panel();
+            AddItemBox = new GroupBox();
+            DescriptionBox = new RichTextBox();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
-            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            AddItemBox.SuspendLayout();
             SuspendLayout();
             // 
             // DatePicker
             // 
-            DatePicker.Location = new Point(3, 134);
+            DatePicker.Location = new Point(150, 93);
             DatePicker.Name = "DatePicker";
             DatePicker.Size = new Size(200, 23);
             DatePicker.TabIndex = 1;
             DatePicker.Value = new DateTime(2024, 1, 21, 22, 14, 23, 0);
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(209, 140);
-            label1.Name = "label1";
-            label1.Size = new Size(31, 15);
-            label1.TabIndex = 9;
-            label1.Text = "Date";
-            // 
             // AmountTextBox
             // 
-            AmountTextBox.Location = new Point(3, 76);
+            AmountTextBox.Location = new Point(150, 39);
             AmountTextBox.Name = "AmountTextBox";
-            AmountTextBox.Size = new Size(100, 23);
+            AmountTextBox.Size = new Size(138, 23);
             AmountTextBox.TabIndex = 8;
             // 
             // AmountLabel
             // 
             AmountLabel.AutoSize = true;
-            AmountLabel.Location = new Point(109, 79);
+            AmountLabel.Location = new Point(150, 21);
             AmountLabel.Name = "AmountLabel";
             AmountLabel.Size = new Size(51, 15);
             AmountLabel.TabIndex = 7;
             AmountLabel.Text = "Amount";
             // 
-            // DescriptionBox
-            // 
-            DescriptionBox.Location = new Point(3, 47);
-            DescriptionBox.Name = "DescriptionBox";
-            DescriptionBox.Size = new Size(100, 23);
-            DescriptionBox.TabIndex = 6;
-            // 
             // DescriptionLabel
             // 
             DescriptionLabel.AutoSize = true;
-            DescriptionLabel.Location = new Point(109, 50);
+            DescriptionLabel.Location = new Point(7, 119);
             DescriptionLabel.Name = "DescriptionLabel";
             DescriptionLabel.Size = new Size(67, 15);
             DescriptionLabel.TabIndex = 5;
@@ -112,15 +99,15 @@
             // 
             // NameBox
             // 
-            NameBox.Location = new Point(3, 18);
+            NameBox.Location = new Point(6, 39);
             NameBox.Name = "NameBox";
-            NameBox.Size = new Size(100, 23);
+            NameBox.Size = new Size(138, 23);
             NameBox.TabIndex = 4;
             // 
             // NameLabel
             // 
             NameLabel.AutoSize = true;
-            NameLabel.Location = new Point(109, 21);
+            NameLabel.Location = new Point(6, 21);
             NameLabel.Name = "NameLabel";
             NameLabel.Size = new Size(39, 15);
             NameLabel.TabIndex = 1;
@@ -128,7 +115,7 @@
             // 
             // AddExpenseButton
             // 
-            AddExpenseButton.Location = new Point(3, 163);
+            AddExpenseButton.Location = new Point(365, 190);
             AddExpenseButton.Name = "AddExpenseButton";
             AddExpenseButton.Size = new Size(75, 23);
             AddExpenseButton.TabIndex = 0;
@@ -139,7 +126,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(3, 105);
+            comboBox1.Location = new Point(6, 93);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 10;
@@ -161,7 +148,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1094, 24);
+            menuStrip1.Size = new Size(853, 24);
             menuStrip1.TabIndex = 12;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -195,9 +182,9 @@
             // statusStrip1
             // 
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
-            statusStrip1.Location = new Point(0, 613);
+            statusStrip1.Location = new Point(0, 730);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(1094, 22);
+            statusStrip1.Size = new Size(853, 22);
             statusStrip1.TabIndex = 13;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -207,39 +194,34 @@
             toolStripStatusLabel1.Size = new Size(118, 17);
             toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
-            // panel1
+            // radioButton2
             // 
-            panel1.Controls.Add(ExpenseLabel);
-            panel1.Controls.Add(NameBox);
-            panel1.Controls.Add(DescriptionLabel);
-            panel1.Controls.Add(comboBox1);
-            panel1.Controls.Add(DescriptionBox);
-            panel1.Controls.Add(DatePicker);
-            panel1.Controls.Add(NameLabel);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(AmountLabel);
-            panel1.Controls.Add(AddExpenseButton);
-            panel1.Controls.Add(AmountTextBox);
-            panel1.Location = new Point(12, 46);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(258, 196);
-            panel1.TabIndex = 14;
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(76, 68);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(68, 19);
+            radioButton2.TabIndex = 13;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Expense";
+            radioButton2.UseVisualStyleBackColor = true;
             // 
-            // ExpenseLabel
+            // radioButton1
             // 
-            ExpenseLabel.AutoSize = true;
-            ExpenseLabel.Location = new Point(3, 0);
-            ExpenseLabel.Name = "ExpenseLabel";
-            ExpenseLabel.Size = new Size(75, 15);
-            ExpenseLabel.TabIndex = 11;
-            ExpenseLabel.Text = "Add Expense";
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(7, 68);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(65, 19);
+            radioButton1.TabIndex = 12;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Income";
+            radioButton1.UseVisualStyleBackColor = true;
             // 
             // BudgetView
             // 
             BudgetView.Columns.AddRange(new ColumnHeader[] { NameHeader, AmountHeader, DateHeader, CategoryHeader, DescriptionHeader });
-            BudgetView.Location = new Point(276, 46);
+            BudgetView.Location = new Point(12, 258);
             BudgetView.Name = "BudgetView";
-            BudgetView.Size = new Size(806, 456);
+            BudgetView.Size = new Size(806, 463);
             BudgetView.TabIndex = 15;
             BudgetView.UseCompatibleStateImageBehavior = false;
             BudgetView.View = View.Details;
@@ -266,25 +248,73 @@
             DescriptionHeader.Text = "Description";
             DescriptionHeader.Width = 597;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(3, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 15);
+            label2.TabIndex = 16;
+            label2.Text = "label2";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(464, 48);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(265, 132);
+            panel2.TabIndex = 17;
+            // 
+            // AddItemBox
+            // 
+            AddItemBox.Controls.Add(DescriptionBox);
+            AddItemBox.Controls.Add(AddExpenseButton);
+            AddItemBox.Controls.Add(radioButton2);
+            AddItemBox.Controls.Add(DatePicker);
+            AddItemBox.Controls.Add(DescriptionLabel);
+            AddItemBox.Controls.Add(radioButton1);
+            AddItemBox.Controls.Add(comboBox1);
+            AddItemBox.Controls.Add(NameLabel);
+            AddItemBox.Controls.Add(NameBox);
+            AddItemBox.Controls.Add(AmountTextBox);
+            AddItemBox.Controls.Add(AmountLabel);
+            AddItemBox.Location = new Point(12, 27);
+            AddItemBox.Name = "AddItemBox";
+            AddItemBox.Size = new Size(446, 225);
+            AddItemBox.TabIndex = 18;
+            AddItemBox.TabStop = false;
+            AddItemBox.Text = "Add New Item";
+            // 
+            // DescriptionBox
+            // 
+            DescriptionBox.Location = new Point(6, 137);
+            DescriptionBox.Name = "DescriptionBox";
+            DescriptionBox.Size = new Size(344, 76);
+            DescriptionBox.TabIndex = 14;
+            DescriptionBox.Text = "";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1094, 635);
+            ClientSize = new Size(853, 752);
+            Controls.Add(AddItemBox);
+            Controls.Add(panel2);
             Controls.Add(BudgetView);
-            Controls.Add(panel1);
             Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Form1";
-            Text = "Form1";
+            Text = "Budgetting App";
             Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            AddItemBox.ResumeLayout(false);
+            AddItemBox.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -292,12 +322,10 @@
         #endregion
         private TextBox AmountTextBox;
         private Label AmountLabel;
-        private TextBox DescriptionBox;
         private Label DescriptionLabel;
         private TextBox NameBox;
         private Label NameLabel;
         private Button AddExpenseButton;
-        private Label label1;
         private DateTimePicker DatePicker;
         private ComboBox comboBox1;
         private ListView ExpenseView;
@@ -312,13 +340,17 @@
         private ToolStripMenuItem newBudgetToolStripMenuItem;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
-        private Panel panel1;
-        private Label ExpenseLabel;
         private ListView BudgetView;
         private ColumnHeader NameHeader;
         private ColumnHeader AmountHeader;
         private ColumnHeader DateHeader;
         private ColumnHeader DescriptionHeader;
         private ColumnHeader CategoryHeader;
+        private Label label2;
+        private Panel panel2;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
+        private GroupBox AddItemBox;
+        private RichTextBox DescriptionBox;
     }
 }

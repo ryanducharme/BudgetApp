@@ -13,6 +13,22 @@ namespace BudgettingApp
         public string Description { get; set; }
         public List<Expense> Expenses { get; set; }
         public List<IncomeSource> IncomeSources { get; set; }
+        public double SumOfExpenses
+        {
+            get
+            {
+                double total = 0;
+                foreach (var expense in Expenses)
+                {
+                    total += expense.Amount;
+                }
+                return total;
+            }
+        }
+
+        double totalIncome;
+        
+
         public Budget(string name)
         {
             Name = name;
@@ -28,5 +44,7 @@ namespace BudgettingApp
         {
             IncomeSources.Add(income);
         }
+
+        
     }
 }
