@@ -26,7 +26,18 @@ namespace BudgettingApp
             }
         }
 
-        double totalIncome;
+        public double SumOfIncomes
+        {
+            get
+            {
+                double total = 0;
+                foreach (var item in IncomeSources)
+                {
+                    total += item.Amount;
+                }
+                return total;
+            }
+        }
         
 
         public Budget(string name)

@@ -8,23 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\rducharme\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Ryan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rducharme\\source\\repos\\BudgetApp\\BudgettingApp\\BudgettingApp.csproj",
+      "projectUniqueName": "C:\\Users\\Ryan\\source\\repos\\BudgetApp\\BudgettingApp\\BudgettingApp.csproj",
       "projectName": "BudgettingApp",
-      "projectPath": "C:\\Users\\rducharme\\source\\repos\\BudgetApp\\BudgettingApp\\BudgettingApp.csproj",
-      "packagesPath": "C:\\Users\\rducharme\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rducharme\\source\\repos\\BudgetApp\\BudgettingApp\\obj\\",
+      "projectPath": "C:\\Users\\Ryan\\source\\repos\\BudgetApp\\BudgettingApp\\BudgettingApp.csproj",
+      "packagesPath": "C:\\Users\\Ryan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ryan\\source\\repos\\BudgetApp\\BudgettingApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\rducharme\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ryan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -68,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
