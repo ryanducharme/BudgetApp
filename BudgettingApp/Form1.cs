@@ -8,13 +8,13 @@ namespace BudgettingApp
 {
     public partial class Form1 : Form
     {
-        BudgetManager manager;
-        DataTable dataTable;
+        BudgetManager _manager;
+        DataTable _dataTable;
 
         public Form1()
         {
             InitializeComponent();
-            manager = new BudgetManager();
+            _manager = new BudgetManager();
 
             //come up with a way to store the last used budget location to auto open when opening the application
         }
@@ -22,29 +22,28 @@ namespace BudgettingApp
         private void AddItemButton_Click(object sender, EventArgs e)
         {
             //if there is data in the fields
-            if (AmountTextBox.Text != "" && NameBox.Text != "")
+            if (!String.IsNullOrEmpty(AmountTextBox.Text) && !String.IsNullOrEmpty(NameBox.Text))
             {
-
                 if (IncomeRadioButton.Checked)
                 {
-                    manager.CurrentBudget.AddIncomeSource(new IncomeSource(null, double.Parse(AmountTextBox.Text), NameBox.Text, DescriptionBox.Text, DatePicker.Value));
-                    manager.SaveBudget();
+                    _manager.CurrentBudget.AddIncomeSource(new IncomeSource(null, double.Parse(AmountTextBox.Text), NameBox.Text, DescriptionBox.Text, DatePicker.Value));
+                    _manager.SaveBudget();
 
                     IncomeDataGridView.DataSource = null;
-                    IncomeDataGridView.DataSource = manager.CurrentBudget.IncomeSources;
+                    IncomeDataGridView.DataSource = _manager.CurrentBudget.IncomeSources;
 
                 }
                 if (ExpenseRadioButton.Checked)
                 {
-                    manager.CurrentBudget.AddExpense(new Expense(null, double.Parse(AmountTextBox.Text), NameBox.Text, DescriptionBox.Text, DatePicker.Value));
-                    manager.SaveBudget();
+                    _manager.CurrentBudget.AddExpense(new Expense(null, double.Parse(AmountTextBox.Text), NameBox.Text, DescriptionBox.Text, DatePicker.Value));
+                    _manager.SaveBudget();
 
-                    var lastExpense = manager.CurrentBudget.Expenses.Last();
+                    var lastExpense = _manager.CurrentBudget.Expenses.Last();
                     //dataGridView1.Rows.Add(lastExpense);
 
                     //these two lines of code will update the data grid view with the new information
                     ExpenseDataGridView.DataSource = null;
-                    ExpenseDataGridView.DataSource = manager.CurrentBudget.Expenses;
+                    ExpenseDataGridView.DataSource = _manager.CurrentBudget.Expenses;
 
                 }
                 UpdateStats();
@@ -54,7 +53,7 @@ namespace BudgettingApp
 
         private void newBudgetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            manager.NewBudget();
+            _manager.NewBudget();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -64,24 +63,24 @@ namespace BudgettingApp
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            manager.LoadBudget();
+            _manager.LoadBudget();
 
             DoDataTableStuff();
 
             UpdateStats();
 
-            BudgetNameLabel.Text = manager.CurrentBudget.Name;
+            BudgetNameLabel.Text = _manager.CurrentBudget.Name;
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            manager.SaveBudget();
+            _manager.SaveBudget();
         }
 
         public void DoDataTableStuff()
         {
-            IncomeDataGridView.DataSource = manager.CurrentBudget.IncomeSources;
-            ExpenseDataGridView.DataSource = manager.CurrentBudget.Expenses;
+            IncomeDataGridView.DataSource = _manager.CurrentBudget.IncomeSources;
+            ExpenseDataGridView.DataSource = _manager.CurrentBudget.Expenses;
         }
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -96,8 +95,8 @@ namespace BudgettingApp
 
         public void UpdateStats()
         {
-            SumOfIncomeLabel.Text = $"Total Income: {manager.CurrentBudget.SumOfIncomes}";
-            SumOfExpensesLabel.Text = $"Total Expenses: {manager.CurrentBudget.SumOfExpenses}";
+            SumOfIncomeLabel.Text = $"Total Income: {_manager.CurrentBudget.SumOfIncomes}";
+            SumOfExpensesLabel.Text = $"Total Expenses: {_manager.CurrentBudget.SumOfExpenses}";
         }
 
         private void IncomeDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)

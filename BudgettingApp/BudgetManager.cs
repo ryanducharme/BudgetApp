@@ -22,9 +22,6 @@ namespace BudgettingApp
         public BudgetManager() 
         {
              folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, folderName);
-            //SaveBudget(NewBudget("MyBudget1"));
-            //CurrentBudget = LoadBudget("C:\\Users\\Ryan\\source\\repos\\BudgetApp\\BudgettingApp\\Budgets\\MyBudget1.json");
-            //Debug.WriteLine(CurrentBudget.Name);
         }
 
         public void NewBudget()
@@ -34,7 +31,6 @@ namespace BudgettingApp
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
                 // Combine base directory with the folder name
-                string folderName = "Budgets";
                 string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, folderName);
 
                 saveFileDialog.Title = "Save a budget";
@@ -57,24 +53,15 @@ namespace BudgettingApp
                     string filePath = Path.Combine(folderPath, saveFileDialog.FileName);
                     Debug.WriteLine(folderPath + " " + saveFileDialog.FileName);
                     budgetName = saveFileDialog.FileName;
-                    try
-                    {
-                        Budget newBudget = new Budget(Path.GetFileNameWithoutExtension(filePath));
-                        CurrentBudget = newBudget;
-                        SaveBudget();
-                        
-                    }
-                    catch { }
+                    
+                    Budget newBudget = new Budget(Path.GetFileNameWithoutExtension(filePath));
+                    CurrentBudget = newBudget;
+                    SaveBudget();
                     
                     //CurrentBudget = LoadBudget(filePath);
                     Debug.WriteLine(CurrentBudget.Name);
                 }
             }
-
-            //Budget b = new Budget(budgetName);
-            
-            ////test data
-            //b.AddExpense(new Expense(null, 100, "apple headphones", "something I got from best buy the other day", DateTime.Now));
         }
 
         public void LoadBudget()

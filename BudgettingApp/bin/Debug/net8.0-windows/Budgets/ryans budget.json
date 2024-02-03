@@ -1,1 +1,1 @@
-{"Name":"ryans budget","Description":null,"Expenses":[],"IncomeSources":[],"SumOfExpenses":0}
+{"Name":"ryans budget","Description":null,"Expenses":[{"Amount":10,"Name":"Tacos","Description":"","Date":"2024-01-21T22:14:23"}],"IncomeSources":[{"Amount":1000,"Name":"Paycheck","Description":"","Date":"2024-01-21T22:14:23"}],"SumOfExpenses":10,"SumOfIncomes":1000}

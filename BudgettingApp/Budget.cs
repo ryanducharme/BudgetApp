@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -13,6 +14,9 @@ namespace BudgettingApp
         public string Description { get; set; }
         public List<Expense> Expenses { get; set; }
         public List<IncomeSource> IncomeSources { get; set; }
+
+        //use this in the future to prevent outside things messing with the expenses/incomes
+        //public ReadOnlyCollection<Expense> MoreExpenses { get; private set; }
         public double SumOfExpenses
         {
             get
@@ -54,9 +58,9 @@ namespace BudgettingApp
         public void RemoveExpense(Expense expense)
         { 
           if (Expenses.Contains(expense))
-            {
+          {
               Expenses.Remove(expense);
-            }
+          }
         }
         public void AddIncomeSource(IncomeSource income)
         {

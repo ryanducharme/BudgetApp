@@ -13,7 +13,7 @@ namespace BudgettingApp
         public string Name {  get; set; }
         public string Description { get; set; }
         public DateTime Date { get; set; }
-        Category Category { get; set; }
+        private Category Category { get; set; }
 
         public Expense() { }
 
