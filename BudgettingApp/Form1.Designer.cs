@@ -28,6 +28,7 @@
     /// </summary>
     private void InitializeComponent()
     {
+      components = new System.ComponentModel.Container();
       DatePicker = new DateTimePicker();
       AmountTextBox = new TextBox();
       AmountLabel = new Label();
@@ -60,11 +61,14 @@
       BudgetNameLabel = new Label();
       groupBox1 = new GroupBox();
       dataGridView1 = new DataGridView();
+      PopupMenu = new ContextMenuStrip(components);
+      Remove = new ToolStripMenuItem();
       menuStrip1.SuspendLayout();
       statusStrip1.SuspendLayout();
       AddItemBox.SuspendLayout();
       groupBox1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+      PopupMenu.SuspendLayout();
       SuspendLayout();
       // 
       // DatePicker
@@ -318,6 +322,19 @@
       dataGridView1.TabIndex = 20;
       dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;
       // 
+      // PopupMenu
+      // 
+      PopupMenu.Items.AddRange(new ToolStripItem[] { Remove });
+      PopupMenu.Name = "contextMenuStrip1";
+      PopupMenu.Size = new Size(181, 48);
+      PopupMenu.Click += PopupMenu_Click;
+      // 
+      // Remove
+      // 
+      Remove.Name = "Remove";
+      Remove.Size = new Size(180, 22);
+      Remove.Text = "Remove";
+      // 
       // Form1
       // 
       AutoScaleDimensions = new SizeF(7F, 15F);
@@ -343,6 +360,7 @@
       groupBox1.ResumeLayout(false);
       groupBox1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+      PopupMenu.ResumeLayout(false);
       ResumeLayout(false);
       PerformLayout();
     }
@@ -382,5 +400,7 @@
     private Label BudgetNameLabel;
     private GroupBox groupBox1;
     private DataGridView dataGridView1;
+    private ContextMenuStrip PopupMenu;
+    private ToolStripMenuItem Remove;
   }
 }

@@ -40,11 +40,16 @@ namespace BudgettingApp
         {
             Expenses.Add(expense);
         }
+        public void RemoveExpense(Expense expense)
+        { 
+          if (Expenses.Contains(expense))
+            {
+              Expenses.Remove(expense);
+            }
+        }
         public void AddIncomeSource(IncomeSource income)
         {
             IncomeSources.Add(income);
-        }
-
-        
+        }  
     }
 }

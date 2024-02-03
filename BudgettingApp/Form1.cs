@@ -91,7 +91,12 @@ namespace BudgettingApp
 
     private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
     {
-      
+
+    }
+
+    private void PopupMenu_Click(object sender, EventArgs e)
+    {
+
     }
   }
 }
